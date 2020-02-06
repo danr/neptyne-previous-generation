@@ -1,35 +1,20 @@
-# neptyne
+# neptyne previous generation
 ​
 [![IRC][IRC Badge]][IRC]
 
-Editor-agnostic jupyter kernel interaction and [kakoune](http://kakoune.org) integration
+Abandoned jupyter kernel interaction and [kakoune](http://kakoune.org) integration.
 
-Work in progress. Enjoy your tinkering around.
+Development continues in [neptyne](http://github.com/danr/neptyne) and is mostly editor-agnostic.
 
-## Setup using kakoune
+## Running
 
-Clone this repo somewhere and make sure kakoune sources it.
+Use a started kakoune process and source `neptyne.kak` there. On its `$PWD` run:
 
-You will need:
-* jupyter the python lib
-* ipython (or ijulia)
-* inotify
-* xterm
-* optional: jedi
-* optional: libsixel for images
-* optional: imagemagick for svg
-
-## Usage from kakoune
-
-Run the command `neptyne`, it will spawn an xterm for you.
-
-The file `neptyne.kak` defines a few keybindings, most of them in insert mode.
-
-Note that the virtualenv you start kakoune in will be inherited from the xterm that is spawned.
-
-## Usage without kakoune
-
-Run `python /path/to/neptyne/neptyne.py your_file.py`.
+```
+python neptyne.py &
+python wss.py &
+chromium --app=http://localhost:8234
+```
 
 ## License
 
